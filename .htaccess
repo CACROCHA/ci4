@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+	DirectoryIndex index.php
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_URI} apici4/
+    RewriteRule (.*) /apici4/public/$1
+    
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /index.php
+</IfModule>
